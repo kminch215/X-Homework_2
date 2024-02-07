@@ -5,10 +5,6 @@ public class Student {
 	private String name = "name"; //import from studentData.txt
 	private double grade; //import from studentData.txt
 	
-	public static void main(String[] args) {
-		Student[] objectArrayReference = new Student[5];
-
-	}
 	//toString
 	//setting up student class
 	//equals
