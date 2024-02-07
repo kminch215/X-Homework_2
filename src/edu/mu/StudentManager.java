@@ -2,6 +2,7 @@ package edu.mu;
 
 public class StudentManager {	
 	public static void main(String[] args) {
+		Student[] objectArrayReference = new Student[5];
 		// Instantiate StudentManager, perform operations based on the requirements.
 		StudentManager studentManager = new StudentManager();
 		// Read student data from a file and initialize Student objects.
@@ -14,10 +15,6 @@ public class StudentManager {
 		boolean studentGradeUpdateStatus = studentManager.updateStudentGradeById(102, 95);
 		// Display all students after the update.
 		studentManager.displayStudents();
-		}
-	public static void main(String[] args) {
-		Student[] objectArrayReference = new Student[5];
-
 	}
 	public void displayStudents() {
 		System.out.println("print from StudentData.txt");
