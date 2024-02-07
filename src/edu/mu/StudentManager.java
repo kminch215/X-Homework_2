@@ -1,11 +1,6 @@
 package edu.mu;
 
-public class StudentManager {
-	private int Student = 4;//id;
-	private String name = "name"; //import from studentData.txt
-	private double grade; //import from studentData.txt
-
-	
+public class StudentManager {	
 	public static void main(String[] args) {
 		// Instantiate StudentManager, perform operations based on the requirements.
 		StudentManager studentManager = new StudentManager();
