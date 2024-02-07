@@ -15,7 +15,10 @@ public class StudentManager {
 		// Display all students after the update.
 		studentManager.displayStudents();
 		}
+	public static void main(String[] args) {
+		Student[] objectArrayReference = new Student[5];
 
+	}
 	public void displayStudents() {
 		System.out.println("print from StudentData.txt");
 		//Display the details of all students in StudentManager
