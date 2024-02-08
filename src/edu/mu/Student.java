@@ -34,7 +34,7 @@ public class Student {
         return "Student ID: " + id + "\nName: " + name + "\nGrade: " + grade;
     	}
 	
-    public boolean equals(Object obj) {
+    	public boolean equals(Object obj) {
         if (this == obj) {
             return true; 
         }
