@@ -1,8 +1,8 @@
 package edu.mu;
 
 public class Student {
-	private int Student = 4;//id;
-	private String name = "name"; //import from studentData.txt
+	private int id; //import from studentData.txt
+	private String name; //import from studentData.txt
 	private double grade; //import from studentData.txt
 	
 	//toString
