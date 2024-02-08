@@ -29,9 +29,22 @@ public class Student {
 	}
 	private String name = "name"; //import from studentData.txt
 	private double grade; //import from studentData.txt
+
+	public String toString() {
+        return "Student ID: " + id + "\nName: " + name + "\nGrade: " + grade;
+    	}
 	
-	//toString
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true; 
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false; 
+        }
+        Student other = (Student) obj; 
+        return id == other.id; 
+    }
+	
 	//setting up student class
-	//equals
 	//print out student manager information
 }
