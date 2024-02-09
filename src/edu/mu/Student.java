@@ -15,11 +15,11 @@ public class Student {
 		this.grade = grade;
 	}
 
-	public int getStudent() {
-		return Student;
+	public int getId() {
+		return id;
 	}
-	public void setStudent(int student) {
-		Student = student;
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getName() {
 		return name;
