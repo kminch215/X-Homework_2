@@ -39,15 +39,15 @@ public class Student {
         return "Student [ID: " + id + ", Name: " + name + ", Grade: " + grade + "]";
     	}
 	
-	@Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true; 
-        }
-        if (obj == null || getClass() != obj.getClass()) {
-            return false; 
-        }
-        Student other = (Student) obj; 
-        return id == other.id; 
+	//@Override
+    public boolean equals(int id) {
+		if(id == this.getId()) {
+			//delete
+			System.out.println("Student found");
+			return true;
+		}
+		//delete
+		System.out.println("Student not found!");
+		return false;
     }
 }
