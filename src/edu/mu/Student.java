@@ -36,7 +36,7 @@ public class Student {
 
 	@Override
 	public String toString() {
-        return "Student [ID: " + id + "\nName: " + name + "\nGrade: " + grade + "]";
+        return "Student [ID: " + id + ", Name: " + name + ", Grade: " + grade + "]";
     	}
 	
 	@Override
