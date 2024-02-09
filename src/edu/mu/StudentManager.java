@@ -2,7 +2,7 @@ package edu.mu;
 
 import java.util.Scanner;
 import java.io.FileNotFoundException;
-import java.io.File;
+import java.io.FileInputStream;
 
 public class StudentManager {	
 	
@@ -69,9 +69,8 @@ public class StudentManager {
 
 	public boolean readFromFile(String fileName) {
 		try {
-			File myFile = new File(fileName);
 			int i=0;
-            Scanner fileIn = new Scanner(myFile);
+            Scanner fileIn = new Scanner(new FileInputStream(fileName));
             while(fileIn.hasNextLine()) {
                 int id = fileIn.nextInt();
                 String name = fileIn.next() + " " + fileIn.next();
