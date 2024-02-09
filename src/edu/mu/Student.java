@@ -1,40 +1,46 @@
 package edu.mu;
 
 public class Student {
-	private int Student = 4;//id;
-	/**
-	 * 
-	 */
-	private Student() {
-		super();
-		// TODO Auto-generated constructor stub
+	private int id;
+	private String name;
+	private double grade;
+
+	public Student() {
+
 	}
-	private int getStudent() {
-		return Student;
-	}
-	private void setStudent(int student) {
-		Student = student;
-	}
-	private String getName() {
-		return name;
-	}
-	private void setName(String name) {
+
+	public Student(int id, String name, double grade){
+		this.id = id;
 		this.name = name;
-	}
-	private double getGrade() {
-		return grade;
-	}
-	private void setGrade(double grade) {
 		this.grade = grade;
 	}
-	private String name = "name"; //import from studentData.txt
-	private double grade; //import from studentData.txt
 
+	public int getStudent() {
+		return Student;
+	}
+	public void setStudent(int student) {
+		Student = student;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getGrade() {
+		return grade;
+	}
+	public void setGrade(double grade) {
+		this.grade = grade;
+	}
+
+	@Override
 	public String toString() {
-        return "Student ID: " + id + "\nName: " + name + "\nGrade: " + grade;
+        return "Student [ID: " + id + "\nName: " + name + "\nGrade: " + grade + "]";
     	}
 	
-    	public boolean equals(Object obj) {
+	@Override
+    public boolean equals(Object obj) {
         if (this == obj) {
             return true; 
         }
@@ -44,7 +50,4 @@ public class Student {
         Student other = (Student) obj; 
         return id == other.id; 
     }
-	
-	//setting up student class
-	//print out student manager information
 }
