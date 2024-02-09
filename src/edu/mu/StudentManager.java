@@ -53,7 +53,7 @@ public class StudentManager {
             Scanner fileIn = new Scanner(myFile);
             while(fileIn.hasNextLine()) {
                 int id = fileIn.nextInt();
-                String name = fileIn.next();
+                String name = fileIn.next() + " " + fileIn.next();
                 double grade = fileIn.nextDouble();
                 
                 students[i] = new Student(id, name, grade);
