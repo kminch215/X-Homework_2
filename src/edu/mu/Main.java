@@ -1,9 +1,11 @@
 package edu.mu;
 
+
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		StudentManager m1 = new StudentManager();
+		m1.readFromFile("studentData.txt");
 
 	}
 
