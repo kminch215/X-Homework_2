@@ -3,9 +3,3 @@
 103	Bob Johnson	78.5
 104	Alive Brown	88.0
 105	Mike Davis	95.5
-
-
-
-///1 : do toString / equals
-//2  : read files
-//3  : id' 
