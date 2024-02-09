@@ -23,7 +23,7 @@ public class StudentManager {
 	public void displayStudents() {
 		for(int i=0; i<students.length; i++) {
 			if(students[i] != null) {
-				System.out.println(students[i].toString());
+				System.out.println(students[i]);
 			}
 			else {
 				System.out.println("The Student[] array is empty");
@@ -31,18 +31,39 @@ public class StudentManager {
 		}
 
 	}
+	
 	public boolean searchStudentById(int id) {
-		//Hint: implement and use the equals() method from the Student class
-		//Display the details of the student if found (toString()) was found
-		//report error or message if not found
-		//return true; //if student ID was found
+		for(int i = 0; i < students.length; i++)
+		{
+			boolean found = students[i].equals(id);
+			if(found)
+			{
+				System.out.println(students[i]);
+				return true;
+			}
+			
+		}
+		
 		return false; //if student ID was not found
 	}
 
 	public boolean updateStudentGradeById(int id, double grade) {
-		//use the search method to search if a student ID exists
-		//update a student's grade by ID
-		//return true; //if successful
+		if(this.searchStudentById(id))
+		{
+			for(int i = 0; i < students.length; i++)
+			{
+				boolean found = students[i].equals(id);
+				if(found)
+				{
+					students[i].setGrade(grade);
+					//delete before submission
+					System.out.println(students[i].toString());
+
+					return true;
+				}
+			}
+		}
+		
 		return false; //if not found
 	}
 
