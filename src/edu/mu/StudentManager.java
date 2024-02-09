@@ -1,17 +1,12 @@
 package edu.mu;
 
 import java.util.Scanner;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-
+import java.io.File;
 
 public class StudentManager {	
 	
 	private Student[] students;
-	
-	// public StudentManager() {
-		
-	// };
 	
 	public StudentManager() {
 		this.students = new Student[5];
@@ -53,23 +48,23 @@ public class StudentManager {
 
 	public boolean readFromFile(String fileName) {
 		try {
-            Scanner fileIn = new Scanner(new FileInputStream(fileName));
+			File myFile = new File(fileName);
+			int i=0;
+            Scanner fileIn = new Scanner(myFile);
             while(fileIn.hasNextLine()) {
                 int id = fileIn.nextInt();
                 String name = fileIn.next();
                 double grade = fileIn.nextDouble();
                 
-                // test print - delete after comfirming
-				System.out.println("ID: " + id + ", Name: " + name + ", Grade: " + grade);
-				
-				fileIn.close();
-                return true;
+                students[i] = new Student(id, name, grade);
+                i++;
             }
+            fileIn.close();
         } catch(FileNotFoundException e){
+        	e.printStackTrace();
             return false;
         }
-
-		return false;
+		return true;
 	}
 	
 }
